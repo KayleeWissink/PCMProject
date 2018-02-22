@@ -144,8 +144,8 @@ set.seed(2345)</code></pre>
 <pre class="r"><code>training &lt;- read.csv(&quot;~/pml-training.csv&quot;, na.strings=c(&quot;NA&quot;,&quot;#DIV/0!&quot;,&quot;&quot;))
 testing &lt;- read.csv(&quot;~/pml-testing.csv&quot;, na.strings=c(&quot;NA&quot;,&quot;#DIV/0!&quot;,&quot;&quot;))</code></pre>
 </div>
-<div id="partion-training-set" class="section level2">
-<h2>Partion training set</h2>
+<div id="partition-training-set" class="section level2">
+<h2>Partition training set</h2>
 <p>We will partition the training set into training and validation set for cross validation purposes. I am going to use 65% for my training set and the remaining 35% for my validation set.</p>
 <pre class="r"><code>inTrain &lt;- createDataPartition(y=training$classe, p=0.65, list=FALSE)
 myTrain &lt;- training[inTrain,]
